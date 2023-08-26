@@ -1,0 +1,31 @@
+.main {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  display: none;
+  z-index: 10;
+}
+
+.active {
+  display: flex;
+}
+.content {
+  cursor: default;
+  max-width: 600px;
+  background-color: white;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  flex-direction: column;
+}
+
+.content *:last-child {
+  margin-bottom: 0px;
+}

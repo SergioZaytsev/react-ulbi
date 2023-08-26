@@ -1,0 +1,20 @@
+.Mybtn {
+  padding: 5px 15px;
+  font-size: 14px;
+  background: transparent;
+  border: 1px solid teal;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 10px;
+}
+
+.Mybtn:hover:not(:disabled) {
+  background-color: teal;
+  color: white;
+  right: 0%;
+}
+
+.Mybtn:disabled {
+  cursor: auto;
+}

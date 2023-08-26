@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 30px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  max-width: 800px;
+
+  margin: 0 auto;
+}
+
+.post {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid paleturquoise;
+  margin-bottom: 10px;
+}
+
+.post button {
+  align-self: center;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.loading {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 30;
+  left: 50%;
+  border-radius: 50%;
+  border: 8px solid rgba(0, 0, 0, 0.3);
+  border-top: 8px solid teal;
+  animation: loading 1s infinite linear;
+  margin: 10px auto;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.pagination {
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+}
+
+.pagination__item {
+  padding: 10px;
+  border: 1px solid teal;
+  cursor: pointer;
+}
+
+.pagination__item.active {
+  background-color: aquamarine;
+}
+
+/* CSS TRANISTION */
+.post-enter {
+  transform: translateX(-350px);
+}
+
+.post-enter-active {
+  transform: translateX(350px);
+  transition: all 300ms;
+}
+
+.post-exit {
+  opacity: 1;
+}
+
+.post-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transform: translateX(-350px);
+  transition: opacity 200ms, transform 200ms;
+}
+
+.navbar {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  background-color: grey;
+  padding: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+.navbar a,
+a:hover,
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.navbar > li:first-child {
+  margin-right: auto;
+  background-color: lightseagreen;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.login-wrapper {
+  margin: 0 auto;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid;
+  padding: 10px;
+}
+
+.login-wrapper button {
+  align-self: flex-start;
+}
+
+.login-wrapper h1 {
+  margin-bottom: 20px;
+}
